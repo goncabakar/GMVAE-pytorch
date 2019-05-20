@@ -14,7 +14,7 @@
    
    -z  Dimension of the latent variable x
    
-   -w' Dimension of the latent variable w
+   -w Dimension of the latent variable w
    
    -hd Number of neurons of each fc layer
    
