@@ -4,8 +4,7 @@ import matplotlib.mlab as mlab
 from sklearn.mixture import GaussianMixture
 import scipy
 
-data = np.load("traj.npy")
-#data = data[1:100000]
+data = np.load("./data/traj.npy")
 
 dim,_ = data.shape
 
