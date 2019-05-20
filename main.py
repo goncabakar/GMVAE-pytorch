@@ -51,10 +51,6 @@ def test(test_data, model):
     return test_loss
 
 
-def loss_function():
-    total_loss = 0
-    return total_loss
-
 def main():
 
     parser = argparse.ArgumentParser()
