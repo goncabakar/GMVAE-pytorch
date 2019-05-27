@@ -2,12 +2,15 @@ import os
 import torch
 from torch import nn, optim
 
-def seperate_dataset(data, seperator):
+def seperate_dataset(data, labels, seperator):
 	idx = torch.randperm(data.nelement())
 	data_perm = data[idx]
+	labels_perm = labels[idx]
 	train_data = data_perm[0:seperator]
 	test_data = data_perm[seperator:]
-	return train_data, test_data
+	train_labels = labels_perm[0:seperator]
+	test_labels = labels_perm[seperator:]
+	return train_data, test_data, train_labels, test_labels
 
 
 def save_checkpoint(model, epoch, model_out_path, save_dir, optimizer=None, lr=0.0001, tloss=-1):

@@ -14,7 +14,7 @@ class FCNet(nn.Module):
         self.flag_act_out = True
 
         if act_out == "tanh":
-            self.act_out = nn.Tanh(True)
+            self.act_out = nn.Tanh()
         elif act_out == "relu":
             self.act_out = nn.ReLU(True)
         else:
